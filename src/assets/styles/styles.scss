@@ -1,0 +1,57 @@
+/* Material import above */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "buttons";
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  @apply debug-screens;
+}
+label {
+  @apply text-gray-500 text-xl text-center;
+}
+select {
+  @apply w-52 px-10 mx-6 text-gray-500 text-xl;
+}
+button {
+  @apply w-52 px-10 mx-10;
+}
+textarea {
+  margin: 10px;
+  width: 500px;
+  height: 100px;
+  @apply border-gray-300 rounded bg-gray-300 bg-opacity-20 focus:border-gray-500 focus:ring-0;
+}
+input {
+  margin: 10px;
+}
+
+/* Global Styles */
+.global-page-container {
+  padding-top: 120px;
+  height: 1060px;
+  @apply container bg-white mx-auto;
+}
+.global-body-container {
+  padding: 20px 20px 20px 0px;
+  height: 920px;
+  @apply bg-white;
+}
+.global-form-container {
+  padding: 5px;
+  @apply container shadow-md;
+}
+.global-input {
+  @apply border-gray-300 rounded bg-gray-300 bg-opacity-20 focus:border-gray-500 focus:ring-0 text-gray-500;
+}
+.global-primary-title {
+  @apply lg:text-xl xl:text-2xl text-gray-700 lg:h-7 lg:w-52 xl:h-9 xl:w-60 mx-4 my-4;
+}
+.global-secondary-title {
+  @apply lg:text-lg xl:text-xl text-gray-600 lg:h-5 lg:w-48 xl:h-7 xl:w-60 mx-4 my-4;
+}
+.global-list-title {
+  @apply lg:text-base font-semibold xl:text-xl text-gray-600 h-7 w-72 mx-4 my-4;
+}

@@ -1,0 +1,13 @@
+.l-div {
+  position: fixed;
+  display: inline-block;
+  background-color: whitesmoke;
+  width: 100%;
+  height: auto;
+}
+.l-hover {
+  @apply hover:py-10 hover:bg-gray-300;
+}
+.l-active {
+  @apply px-4 py-10 bg-gray-300;
+}

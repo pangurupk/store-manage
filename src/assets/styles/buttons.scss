@@ -1,0 +1,15 @@
+.btn {
+  @apply flex font-bold w-40 justify-center items-center rounded shadow-md;
+}
+.btn-primary {
+  @apply bg-amber-500 text-white  border-2 border-amber-400;
+}
+.btn-primary:hover {
+  @apply bg-amber-400 border-2 border-black;
+}
+.btn-primary:disabled {
+  @apply bg-gray-400 text-white  border-2 border-gray-700;
+}
+.btn-div {
+  @apply flex justify-center items-center my-4;
+}

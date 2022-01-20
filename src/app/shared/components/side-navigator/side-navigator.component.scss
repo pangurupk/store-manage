@@ -1,0 +1,12 @@
+.l-sidenav {
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.l-tags {
+  @apply md:text-base xl:text-xl text-gray-500 h-14 px-4 py-3 hover:bg-gray-300 block;
+}
+.l-active {
+  @apply md:text-base lg:text-xl text-gray-500 h-14 px-4 py-3 bg-gray-300;
+}

@@ -1,0 +1,11 @@
+.l-select {
+  border: 1px solid black;
+  @apply w-60  text-gray-500 text-base h-10;
+}
+.l-dropdown {
+  min-width: 210px;
+  @apply flex flex-col my-2 mx-6 absolute bg-white rounded-sm shadow-lg;
+}
+.l-option {
+  @apply px-5 py-2 h-12 text-lg text-gray-500 hover:bg-gray-300 shadow-sm rounded-md;
+}

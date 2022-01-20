@@ -1,0 +1,49 @@
+<SM-main-navigator></SM-main-navigator>
+<div class="global-page-container">
+  <div class="global-body-container flex">
+    <div>
+      <SM-side-navigator></SM-side-navigator>
+    </div>
+    <div>
+      <form [formGroup]="formGroup" class="global-form-container">
+        <div class="l-form-body">
+          <div class="global-primary-title">
+            <h1>Add Catagory</h1>
+          </div>
+          <div>
+            <input
+              class="global-input"
+              type="text"
+              placeholder="Enter Name"
+              formControlName="catagoryName"
+            />
+          </div>
+          <div>
+            <textarea
+              formControlName="description"
+              cols="30"
+              rows="10"
+              placeholder="description"
+            ></textarea>
+          </div>
+          <div class="btn-div">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="onAdd()"
+              [disabled]="formGroup.invalid"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div>
+      <SM-list-display
+        [displayList]="catagoriesList"
+        [displayType]="'Catagory'"
+      ></SM-list-display>
+    </div>
+  </div>
+</div>

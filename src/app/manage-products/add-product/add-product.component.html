@@ -1,0 +1,105 @@
+<SM-main-navigator></SM-main-navigator>
+
+<div class="global-page-container">
+  <div class="global-body-container flex flex-row">
+    <div>
+      <SM-side-navigator></SM-side-navigator>
+    </div>
+    <div>
+      <form [formGroup]="formGroup" class="global-form-container">
+        <div class="l-form-body">
+          <div class="global-primary-title">
+            <h1>Add Product</h1>
+          </div>
+          <div class="flex">
+            <div class="m-2">
+              <div class="global-secondary-title">
+                <h1>Select Catagory</h1>
+              </div>
+              <div class="mb-3">
+                <SM-select
+                  [catagoryList]="catagoryNames"
+                  (selectedOption)="onCatagorySelect($event)"
+                ></SM-select>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="global-secondary-title">
+                <h1>Select Catagory Type</h1>
+              </div>
+              <div class="mb-3">
+                <SM-select
+                  [catagoryList]="catagoryTypeNames"
+                  (selectedOption)="onTypeSelect($event)"
+                ></SM-select>
+              </div>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="m-2">
+              <div class="global-secondary-title">
+                <h1>Select Brand</h1>
+              </div>
+              <div class="mb-3">
+                <SM-select
+                  [catagoryList]="brandNames"
+                  (selectedOption)="onBrandSelect($event)"
+                ></SM-select>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="global-secondary-title">
+                <h1>Select Brand Type</h1>
+              </div>
+              <div class="mb-3">
+                <SM-select
+                  [catagoryList]="brandTypeNames"
+                  (selectedOption)="onBrandTypeSelect($event)"
+                ></SM-select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input
+              class="global-input"
+              type="text"
+              formControlName="productName"
+              id="catagoryId"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div>
+            <textarea
+              formControlName="description"
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="description"
+            ></textarea>
+          </div>
+          <div class="btn-div">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="onAdd()"
+              [disabled]="
+                formGroup.invalid ||
+                !catagorySelected ||
+                !typeSelected ||
+                !brandSelected
+              "
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div>
+      <SM-list-display
+        [displayList]="productsList"
+        [displayType]="'Products'"
+      ></SM-list-display>
+    </div>
+  </div>
+</div>

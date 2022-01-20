@@ -1,0 +1,10 @@
+<div class="xl:w-full lg:w-60">
+  <div class="global-list-title">
+    <h1>Available {{ displayType }}</h1>
+  </div>
+  <div>
+    <ul *ngFor="let list of displayList">
+      <li class="i-listli">{{ list.name }}</li>
+    </ul>
+  </div>
+</div>
